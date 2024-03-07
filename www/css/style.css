@@ -1,0 +1,56 @@
+/* style.css */
+
+/* Set the background color to black and text color to white for the body */
+
+/* Customize the sidebar */
+
+/* Customize the sidebar menu items */
+
+
+.double-border-text {
+    $random-text: 'Nitrogen Risk Assessment';
+    position: relative;
+    $stroke-width: $large * 0.2;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    font-size: $extra-large;
+    color: white;
+    display: inline-block;
+    vertical-align: super; 
+    font-size: 60%;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: lighten(adjust-hue($yellow, -5%), 35%);
+
+    &:after {
+      content: $random-text;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-text-stroke-width: 0;
+      color: $orange;
+    }
+    
+    &:before {
+      z-index: -1;
+      content: $random-text;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-text-stroke-width: $stroke-width + 15px;
+      -webkit-text-stroke-color: $orange;
+    }
+  }
+  
+sub,
+sup {
+  display: inline-block;
+  vertical-align: super; 
+  font-size: 60%;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
